@@ -10,7 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="171dp"
         android:layout_height="62dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="CREA TU RECETA"
         android:textSize="20sp"
@@ -48,17 +48,83 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="152dp"
         android:text="AGREGAR"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPrep" />
+
+    <EditText
+        android:id="@+id/etIngredente"
+        android:layout_width="311dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Ingrediente"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etTitulo" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/etIngredente2"
+        android:layout_width="311dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:hint="Ingrediente"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitulo" />
+
+    <EditText
+        android:id="@+id/etIngredente4"
+        android:layout_width="311dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="224dp"
+        android:ems="10"
+        android:hint="Ingrediente"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitulo" />
+
+    <EditText
+        android:id="@+id/etIngredente3"
+        android:layout_width="311dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="160dp"
+        android:ems="10"
+        android:hint="Ingrediente"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitulo" />
+
+    <EditText
+        android:id="@+id/etPrep"
+        android:layout_width="317dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Preparacion..."
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIngredente5" />
+
+    <EditText
+        android:id="@+id/etIngredente5"
+        android:layout_width="311dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="296dp"
         android:ems="10"
         android:hint="Ingrediente"
         android:inputType="textPersonName"

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         // drawer layout instance to toggle the menu icon to open
-        // drawer and back button to close drawer
+        // drawer and back button to  close drawer
         drawerLayout = findViewById(R.id.my_drawer_layout);
         navigationView = findViewById(R.id.navigationView);
         navigationView.setNavigationItemSelectedListener(this);
@@ -48,6 +48,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // to make the Navigation drawer icon always appear on the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if(savedInstanceState == null) {
+            getSupportFragmentManager().
+                    beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        }
 
     }
 

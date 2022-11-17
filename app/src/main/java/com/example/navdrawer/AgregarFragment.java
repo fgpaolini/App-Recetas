@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.example.navdrawer.databasehelper.DatabaseHelper;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +27,10 @@ public class AgregarFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    EditText title_receta, prep, ingrediente, ingrediente2, ingrediente3, ingrediente4, ingrediente5 ;
+    Button add_button;
+
 
     public AgregarFragment() {
         // Required empty public constructor
@@ -59,6 +67,30 @@ public class AgregarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_agregar, container, false);
+        View view = inflater.inflate(R.layout.fragment_agregar, container, false);
+
+        title_receta = view.findViewById(R.id.etTitulo);
+        prep = view.findViewById(R.id.etPrep);
+        ingrediente = view.findViewById(R.id.etIngredente);
+        ingrediente2 = view.findViewById(R.id.etIngredente2);
+        ingrediente3 = view.findViewById(R.id.etIngredente3);
+        ingrediente4 = view.findViewById(R.id.etIngredente4);
+        ingrediente5 = view.findViewById(R.id.etIngredente5);
+        add_button = view.findViewById(R.id.bnAdd);
+
+        add_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseHelper myDB = new DatabaseHelper(AgregarFragment.this.getContext());
+                myDB.addReceta(title_receta.getText().toString().trim(),
+                        prep.getText().toString().trim(),
+                        ingrediente.getText().toString().trim(),
+                        ingrediente2.getText().toString().trim(),
+                        ingrediente3.getText().toString().trim(),
+                        ingrediente4.getText().toString().trim(),
+                        ingrediente5.getText().toString().trim());
+            }
+        });
+        return view;
     }
 }
